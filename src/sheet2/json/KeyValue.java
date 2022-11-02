@@ -1,5 +1,5 @@
 // KeyValue.java
-public final class KeyValue extends Expr {
+public final class KeyValue extends JSON {
     private final String key;
     private final String split;
     private final Value value;

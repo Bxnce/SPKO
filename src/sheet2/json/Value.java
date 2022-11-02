@@ -1,5 +1,5 @@
 // Value.java
-public final class Value extends Expr {
+public final class Value extends JSON {
     private final String value;
 
     public Value(String value) {

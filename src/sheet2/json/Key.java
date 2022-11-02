@@ -1,5 +1,5 @@
 // Key.java
-public final class Key extends Expr {
+public final class Key extends JSON {
     private final String key;
 
 

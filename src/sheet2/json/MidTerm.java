@@ -1,5 +1,5 @@
 // MidTerm.java
-public final class MidTerm extends Expr {
+public final class MidTerm extends JSON {
     private final KeyValue keyvalueL;
     private final String delimiter;
     private final KeyValue keyvalueR;
