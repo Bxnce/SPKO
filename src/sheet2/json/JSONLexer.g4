@@ -1,12 +1,5 @@
 lexer grammar JSONLexer;
 
-
-
-//Do in parser
-
-//
-
-
 OOPEN        :   '{';
 OCLOSE       :   '}';
 AOPEN        :   '[';
