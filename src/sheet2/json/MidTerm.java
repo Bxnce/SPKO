@@ -1,22 +1,35 @@
 // MidTerm.java
 public final class MidTerm extends JSON {
-    private final KeyValue keyvalueL;
+    private final JSON keyvalueL;
     private final String delimiter;
-    private final KeyValue keyvalueR;
+    private final JSON keyvalueR;
 
-    public MidTerm(KeyValue keyvalueL, String delimiter, KeyValue keyvalueR) {
+    public MidTerm(JSON keyvalueL, String delimiter, JSON keyvalueR) {
         this.keyvalueL = keyvalueL;
         this.delimiter = delimiter;
         this.keyvalueR = keyvalueR;
     }
 
+    public MidTerm(JSON keyvalueL){
+        this.keyvalueL = keyvalueL;
+        this.keyvalueR = null;
+        this.delimiter = null;
+    }
+
     public String getMidTerm() {
-        return this.keyvalueL + this.delimiter + this.keyvalueR;
+        if(keyvalueR == null || delimiter == null) {
+            return this.keyvalueL.toString();
+        } else{
+            return this.keyvalueL.toString() + this.delimiter + this.keyvalueR.toString();
+        }
     }
 
     @Override
     public String toString() {
-        return this.keyvalueL.toString() + this.delimiter.toString() + this.keyvalueR.toString();
-    }
+        if(keyvalueR == null || delimiter == null) {
+            return this.keyvalueL.toString();
+        } else{
+            return this.keyvalueL.toString() + this.delimiter + this.keyvalueR.toString();
+        }    }
 }
 

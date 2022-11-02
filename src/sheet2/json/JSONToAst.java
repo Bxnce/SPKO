@@ -16,7 +16,7 @@ public final class JSONToAst {
         }
 
         JSON ast = new JSONBuilder().build(tree);
-        System.out.printf("Expr.toString() = \"%s\"%n", ast);
+        System.out.printf("JSON.toString() = \"%s\"%n", ast);
     }
 }
 

@@ -12,37 +12,39 @@ public final class JSONBuilder extends JSONParserBaseListener {
     }
 
     @Override
-    public void exitExpr(JSONParser.Context ctx) {
+    public void exitJson_doc(JSONParser.Json_docContext ctx) {
         if (ctx.getChildCount() == 3) {
-            JSON right = this.stack.pop();
-            JSON left = this.stack.pop();
-            String op = ctx.getChild(1).getText();
-            this.stack.push(new Operation(left, op, right));
+            String open = ctx.getChild(0).getText();
+            String close = ctx.getChild(2).getText();
+            JSON midTerm = this.stack.pop();
+            this.stack.push(new JSON_Obj(open, midTerm, close));
         }
     }
 
     @Override
-    public void exitMultExpr(ExprParser.MultExprContext ctx) {
+    public void exitMidterm(JSONParser.MidtermContext ctx) {
         if (ctx.getChildCount() == 3) {
-            JSON right = this.stack.pop();
-            JSON left = this.stack.pop();
-            String op = ctx.getChild(1).getText();
-            this.stack.push(new Operation(left, op, right));
+            JSON keyvalueR = this.stack.pop();
+            JSON keyvalueL = this.stack.pop();
+            String delimiter = ctx.getChild(1).getText();
+            this.stack.push(new MidTerm(keyvalueL, delimiter, keyvalueR));
+        } else if (ctx.getChildCount() == 1){
+            JSON keyvalue = this.stack.pop();
+            this.stack.push(new MidTerm(keyvalue));
         }
     }
 
     @Override
-    public void exitValue(ExprParser.ValueContext ctx) {
-        String s = ctx.Number().getText();
-        switch (ctx.getStart().getType()) {
-        case ExprLexer.PLUS:
-            s = ctx.PLUS().getText() + s;
-            break;
-        case ExprLexer.MINUS:
-            s = ctx.MINUS().getText() + s;
-            break;
-        }
+    public void exitKeyvalue(JSONParser.KeyvalueContext ctx){
+        String key = ctx.getChild(0).getText();
+        String split = ctx.getChild(1).getText();
+        JSON value = this.stack.pop();
+        this.stack.push(new KeyValue(key, split, value));
+    }
 
+    @Override
+    public void exitValue(JSONParser.ValueContext ctx) {
+        String s = ctx.getText();
         this.stack.push(new Value(s));
     }
 }
