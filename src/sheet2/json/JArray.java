@@ -2,29 +2,29 @@ import java.util.LinkedList;
 import java.util.List;
 
 // Operation.java
-public final class JSON_Obj extends JSON {
+public final class JArray extends JSON {
     public final String open;
-    public final List<JSON> json_list;
+    public final List<Value> array_values;
     public final String close;
 
-    public JSON_Obj(String open, List<JSON> json_list, String close) {
+    public JArray(String open, List<Value> array_values, String close) {
         this.open = open;
-        this.json_list = json_list;
+        this.array_values = array_values;
         this.close = close;
     }
 
-    public JSON_Obj(String open, String close) {
+    public JArray(String open, String close) {
         this.open = open;
-        this.json_list = new LinkedList<>();
+        this.array_values = new LinkedList<>();
         this.close = close;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (JSON key_value : this.json_list) {
+        for (JSON key_value : this.array_values) {
             sb.append(key_value.toString()).append(",");
         }
-        return "{" + sb.delete(sb.length()-1, sb.length()) + "}";
+        return "[" + sb.delete(sb.length()-1, sb.length()) + "]";
     }
 }
