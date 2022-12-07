@@ -28,7 +28,10 @@ public final class Procedural {
 
     //readlines implementation without using loops
     private static void readLines(BufferedReader input, List<String> lines) throws IOException {
-        input.lines().forEach(lines::add);
+        String line;
+        while ((line = input.readLine()) != null) {
+            lines.add(line);
+        }
     }
 
     private static void removeEmptyLines(List<String> lines) {
@@ -39,6 +42,7 @@ public final class Procedural {
             }
         }
     }
+
 
     private static void removeShortLines(List<String> lines) {
         var tmp_lines = new LinkedList<String>(lines);
