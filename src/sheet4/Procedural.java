@@ -23,7 +23,6 @@ public final class Procedural {
         int n = totalLineLengths(lines);
 
         long stop = System.nanoTime();
-
         System.out.printf("result = %d (%d microsec)%n", n, (stop - start) / 1000);
     }
 
@@ -33,15 +32,29 @@ public final class Procedural {
     }
 
     private static void removeEmptyLines(List<String> lines) {
-        lines.removeIf(String::isEmpty);
+        var tmp_lines = new LinkedList<String>(lines);
+        for(String line : tmp_lines) {
+            if(line.length() == 0) {
+                lines.remove(line);
+            }
+        }
     }
 
     private static void removeShortLines(List<String> lines) {
-        lines.removeIf(s -> s.length() < MIN_LENGTH);
+        var tmp_lines = new LinkedList<String>(lines);
+        for(String line : tmp_lines) {
+            if(line.length() < MIN_LENGTH) {
+                lines.remove(line);
+            }
+        }
     }
 
     private static int totalLineLengths(List<String> lines) {
-        return lines.stream().mapToInt(String::length).sum();
+        int ttll = 0;
+        for(String line: lines){
+            ttll += line.length();
+        }
+        return ttll;
     }
 
     // TODO: Klassenmethoden readLines, removeEmptyLines, removeShortLines, totalLineLengths
