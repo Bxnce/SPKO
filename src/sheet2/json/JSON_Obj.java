@@ -4,10 +4,10 @@ import java.util.List;
 // Operation.java
 public final class JSON_Obj extends JSON {
     public final String open;
-    public final List<JSON> json_list;
+    public final List<KeyValue> json_list;
     public final String close;
 
-    public JSON_Obj(String open, List<JSON> json_list, String close) {
+    public JSON_Obj(String open, List<KeyValue> json_list, String close) {
         this.open = open;
         this.json_list = json_list;
         this.close = close;
