@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ea9bfb92-1df9-4581-a8fe-6fbe9b625d1b" name="Changes" comment="fixed arrays, finished task 3.1,3.2">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <list id="8f5c5126-454d-442c-b54c-d64371103c4d" name="Changes by haase" comment="Changes by haase" />
+    <list id="a9587e13-400a-4ad6-a758-3a0ac2b4f136" name="Changes by Lars" comment="Changes by Lars" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2Gfbe6zuBsWa04Kh86mu6PrrW8u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="JSONToAst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JSONToAst" />
+      <module name="SPKO1" />
+      <option name="REDIRECT_INPUT" value="true" />
+      <option name="INPUT_FILE" value="$PROJECT_DIR$/src/sheet2/json/in.txt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/sheet2/json" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JSONToAst" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea9bfb92-1df9-4581-a8fe-6fbe9b625d1b" name="Changes" comment="" />
+      <created>1666782677730</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666782677730</updated>
+      <workItem from="1666782681192" duration="199000" />
+      <workItem from="1666782885071" duration="1364000" />
+      <workItem from="1667391957795" duration="8521000" />
+      <workItem from="1667984826131" duration="67000" />
+      <workItem from="1667984924726" duration="1513000" />
+      <workItem from="1668588294811" duration="4763000" />
+      <workItem from="1668593110977" duration="699000" />
+      <workItem from="1668598934320" duration="4899000" />
+      <workItem from="1668603992642" duration="8501000" />
+      <workItem from="1669193276978" duration="109000" />
+      <workItem from="1669193505658" duration="731000" />
+      <workItem from="1670404031388" duration="241000" />
+    </task>
+    <task id="LOCAL-00001" summary="added sheet_1 and sheet_2 task 2a">
+      <created>1666782814744</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666782814744</updated>
+    </task>
+    <task id="LOCAL-00002" summary="start 2b">
+      <created>1667392042666</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667392042666</updated>
+    </task>
+    <task id="LOCAL-00003" summary="start 2b">
+      <created>1667392712819</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667392712819</updated>
+    </task>
+    <task id="LOCAL-00004" summary="start 2b">
+      <created>1667393280081</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667393280081</updated>
+    </task>
+    <task id="LOCAL-00005" summary="start 2b">
+      <created>1667399500359</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667399500359</updated>
+    </task>
+    <task id="LOCAL-00006" summary="dying">
+      <created>1668603016693</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668603016693</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fixed arrays, finished task 3.1,3.2">
+      <created>1668612410432</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668612410432</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixed arrays, finished task 3.1,3.2">
+      <created>1670404106440</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670404106440</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changes by haase">
+      <created>1670404119475</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670404119475</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changes by Lars">
+      <created>1670404128299</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670404128299</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added sheet_1 and sheet_2 task 2a" />
+    <MESSAGE value="start 2b" />
+    <MESSAGE value="dying" />
+    <MESSAGE value="fixed arrays, finished task 3" />
+    <MESSAGE value="fixed arrays, finished task 3.1,3.2" />
+    <MESSAGE value="Changes by haase" />
+    <MESSAGE value="Changes by Lars" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by Lars" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/sheet2/json/JSONBuilder.java</url>
+          <line>54</line>
+          <properties class="JSONBuilder" method="enterArray">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/sheet2/json/JSONBuilder.java</url>
+          <line>62</line>
+          <properties class="JSONBuilder" method="exitArray">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/sheet2/json/JSONBuilder.java</url>
+          <line>68</line>
+          <properties class="JSONBuilder" method="exitValue">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="JSONBuilder" memberName="value_stack" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+Clock_am_pm=1
+AMS=2
+AME=3
+PMS=4
+PME=5
+TOO=6
+HOUR=7
+MINUTES=8
+WS=9
+'a.m.'=2
+'noon'=3
+'p.m.'=4
+'midnight'=5
+'12'=6
