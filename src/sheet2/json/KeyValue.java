@@ -1,8 +1,8 @@
 // KeyValue.java
 public final class KeyValue extends JSON {
-    private final String key;
-    private final String split;
-    private final JSON value;
+    public final String key;
+    public final String split;
+    public final JSON value;
 
     public KeyValue(String key, String split, JSON value) {
         this.key = key;
