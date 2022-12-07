@@ -13,8 +13,6 @@ public final class JSONBuilder extends JSONParserBaseListener {
     public JSON build(ParseTree tree) {
         new ParseTreeWalker().walk(this, tree);
 
-        System.out.println("DEBUG: "+this.object_stack);
-        System.out.println("DEBUG: "+this.value_stack);
         return this.object_stack.pop();
     }
 
@@ -23,7 +21,6 @@ public final class JSONBuilder extends JSONParserBaseListener {
         String open = ctx.getChild(0).getText();
         String close = ctx.getChild(2).getText();
         JSON_Obj json_obj = new JSON_Obj(open, close);
-        System.out.println("DEBUG: enterJson");
         this.object_stack.push(json_obj);
     }
 
@@ -33,10 +30,7 @@ public final class JSONBuilder extends JSONParserBaseListener {
         if (object_stack.size() > 1) {
             JSON json_obj = this.object_stack.pop();
 
-            System.out.println("DEBUG: list of key_values: " + json_obj.toString());
-
             this.value_stack.push(json_obj);
-            System.out.println("DEBUG: push json_doc to value_stack: " + json_obj);
         }
     }
 
@@ -46,7 +40,6 @@ public final class JSONBuilder extends JSONParserBaseListener {
         String key = ctx.getChild(0).getText();
         String split = ctx.getChild(1).getText();
         JSON value = this.value_stack.pop();
-        System.out.println("DEBUG: pop of value_stack: "+value);
         JSON_Obj json_obj = this.object_stack.peek();
         for (KeyValue existing_key: json_obj.json_list) {
             if(key.equals(existing_key.key)){
@@ -55,8 +48,6 @@ public final class JSONBuilder extends JSONParserBaseListener {
             }
         }
         json_obj.json_list.add(new KeyValue(key, split, value));
-
-        System.out.println("DEBUG: add key_value to json_list: " + new KeyValue(key, split, value));
     }
 
 
