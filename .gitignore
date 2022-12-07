@@ -15,3 +15,5 @@
 /src/sheet2/json/JSONParserListener.class
 /src/sheet2/json/JSONLexer.java
 /src/sheet2/json/JSONLexer.class
+*.class
+*.interp
