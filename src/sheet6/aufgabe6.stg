@@ -1,0 +1,48 @@
+// aufgabe6.stg
+delimiters "$", "$"
+
+aufgabe6(k) ::= <<
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<style type="text/css">
+th, td { border-bottom: thin solid; padding: 4px; text-align: left; }
+th, td { font-family: monospace }
+</style>
+</head>
+<body>
+<h1>Sprachkonzepte, Aufgabe 6</h1>
+$k:klasse(); separator="\n"$
+</body>
+</html>
+>>
+
+klasse(k) ::= <<
+<h2>$k.type$ $k.name$:</h2>
+$if(k.isInterface)$$k:interface()$$else$$k:class()$$endif$
+>>
+
+interface(i) ::= <<
+<table>
+<tr><th>Methods</th></tr>
+<tr><td>
+$first(i.interfaces).methods:interface_methods()$
+</tr></td>
+</table>
+>>
+
+interface_methods(m) ::= <<
+$m$<br>
+>>
+
+class(c) ::= <<
+<table>
+<tr><th>Interface</th><th>Methods</th></tr>
+$c.interfaces:class_interfaces()$
+</table>
+>>
+
+class_interfaces(ci) ::= <<
+<tr><th>$ci.name$</th><th>$ci.methods:interface_methods()$</th></tr>
+>>
+
